@@ -1,0 +1,79 @@
+html , body{
+	height: 100%;
+}
+
+.login-container {
+	background-color: #000;
+	align-content: center;
+
+}
+
+.logopic {
+	width: 540px;
+	height: 650px;
+	background:#002a16;
+}
+
+img {
+	width: 100%;
+	height: 650px;
+	object-fit: cover;
+	vertical-align: middle;
+	position: 
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.right {
+	flex-direction: row;
+	background: #ffff;
+}
+
+.login h3{
+	text-align: center;
+	margin-top: 75px;
+	color: #002a16;
+	font-size: 50px;
+	letter-spacing: 4px;
+	font-family: 'Muli', sans-serif;
+}
+
+.pass {
+	 padding: 3%;
+	 display: flex;
+	 margin-top: -20px;
+}
+
+.email_box {
+	margin-top: 50px;
+}
+
+.username {
+	 padding: 3%;
+	 display: flex;
+}
+
+.input-group-prepend span {
+display: flex;
+width: 50px;
+background-color: #002a16;
+color: white;
+border:0 !important;
+}
+
+.login_btn {
+padding:3%; 
+color: white;
+background-color: #002a16;
+margin-right: auto;
+margin-left: auto;
+margin-top: 30px;
+width: 100px;	
+}
+
+
+.forgot_pass {
+	margin-top: -30px;
+	color: #999999;
+	font-style: italic;
+}
