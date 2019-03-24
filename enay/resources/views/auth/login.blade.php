@@ -3,14 +3,14 @@
 @section('content')
     <div class="container login-container">
         <div class="row">
-            <div id="col-md-6 left">
-                <div class="logopic">
-                    <img src="images/enay logo.png" alt="enay logo">
+            <div class="wrap">
+                <div id="col-md-6 left">
+                    <div class="logopic">
+                        <img src="images/enay logo.png" alt="enay logo">
+                    </div>
                 </div>
-            </div>
         
-    <div class="col-md-6 right">
-        <div class="login">
+        <div class="col-md-6 login">
              <h3>LOGIN</h3>
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
@@ -32,8 +32,6 @@
                         </div>
 
                         <div class="form-group row">
-
-                    <!--  <input type="password" class="form-control" placeholder="PASSWORD" value="" /> -->
                             <div class="col-md-12 pass">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-key"></i></span>
