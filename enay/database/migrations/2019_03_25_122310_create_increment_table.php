@@ -18,6 +18,13 @@ class CreateIncrementTable extends Migration
             $table->integer('num')->default('0');
             $table->timestamps();
         });
+
+        DB::table('increment')->insert(
+            array('prefix'=>'HC'),
+            array('prefix'=>'PUR'),
+            array('prefix'=>'BAR'),
+            array('prefix'=>'CTY')
+        );
     }
 
     /**
