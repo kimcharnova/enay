@@ -26,6 +26,10 @@ class CreateHealthcenterTable extends Migration
             $table->foreign('barangayid')->references('barangayid')->on('barangay');
             $table->foreign('cityid')->references('cityid')->on('city');
         });
+
+        DB::table('healthcenter')->insert(
+            array('purokid' => 'samplepurok', 'barangayid'=>'samplebarangay', 'cityid'=>'samplecity')
+        );
     }
 
     /**
