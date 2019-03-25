@@ -19,10 +19,6 @@ class CreatePurokTable extends Migration
             $table->timestamps();
         });
 
-        DB::table('purok')->insert(
-            array('name' => 'samplepurok')
-        );
-
     }
 
     /**

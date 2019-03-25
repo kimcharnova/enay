@@ -19,6 +19,9 @@ class AddTriggerCity extends Migration
                 UPDATE increment SET num=num+1 where prefix=NEW.cityid;
                 SET new.cityid = concat(new.cityid, (SELECT num from increment where prefix=new.cityid));
             END');
+
+        
+
     }
 
     /**

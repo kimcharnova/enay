@@ -19,10 +19,7 @@ class CreateCityTable extends Migration
             $table->timestamps();
         });
 
-        DB::table('city')->insert(
-            array('name' => 'samplecity')
-        );
-
+        
     }
 
     /**

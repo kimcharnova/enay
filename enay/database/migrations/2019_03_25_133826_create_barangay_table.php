@@ -19,9 +19,7 @@ class CreateBarangayTable extends Migration
             $table->timestamps();
         });
 
-        DB::table('barangay')->insert(
-            array('name' => 'samplebarangay')
-        );
+        
 
     }
 

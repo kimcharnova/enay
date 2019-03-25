@@ -19,6 +19,8 @@ class AddTriggerPurok extends Migration
                 UPDATE increment SET num=num+1 where prefix=NEW.purokid;
                 SET new.purokid = concat(new.purokid, (SELECT num from increment where prefix=new.purokid));
             END');
+
+
     }
 
     /**

@@ -19,6 +19,8 @@ class AddTriggerBarangay extends Migration
                 UPDATE increment SET num=num+1 where prefix=NEW.barangayid;
                 SET new.barangayid = concat(new.barangayid, (SELECT num from increment where prefix=new.barangayid));
             END');
+
+        
     }
 
     /**
