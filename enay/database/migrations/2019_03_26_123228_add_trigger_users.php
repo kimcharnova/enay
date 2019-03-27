@@ -24,6 +24,8 @@ class AddTriggerUsers extends Migration
             IF(@hc IS NOT NULL) THEN
                 UPDATE increment SET num=num+1 where prefix=NEW.id;
                 SET new.id = concat(new.id, (SELECT num from increment where prefix=new.id));
+            ELSE
+                SET new.id = NULL;
             END IF;
             END');
             

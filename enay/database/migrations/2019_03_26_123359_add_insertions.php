@@ -18,20 +18,23 @@ class AddInsertions extends Migration
             array('prefix'=>'PUR'),
             array('prefix'=>'BAR'),
             array('prefix'=>'CTY'),
-            array('prefix'=>'PER')
+            array('prefix'=>'PER'),
+            array('prefix'=>'MOM')
         ));
-
-        DB::table('purok')->insert(
-            array('name' => 'samplepurok')
-        );
-
-        DB::table('barangay')->insert(
-            array('name' => 'samplebarangay')
-        );
 
         DB::table('city')->insert(
             array('name' => 'samplecity')
         );
+
+        DB::table('barangay')->insert(
+            array('name' => 'samplebarangay', 'cityid' => 'CTY1')
+        );
+
+        DB::table('purok')->insert(
+            array('name' => 'samplepurok', 'barangayid' => 'BAR1')
+        );
+
+               
 
         DB::table('healthcenter')->insert(
             array('purokid' => 'PUR1', 'barangayid' => 'BAR1', 'cityid' => 'CTY1')
