@@ -23,6 +23,7 @@ class CreatePregnancyTable extends Migration
             $table->date('EDC');
             $table->timestamps();
         });
+
     }
 
     /**

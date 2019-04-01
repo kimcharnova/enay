@@ -14,12 +14,21 @@ class AddInsertions extends Migration
     public function up()
     {
         DB::table('increment')->insert(array(
-            array('prefix'=>'HC'),
-            array('prefix'=>'PUR'),
-            array('prefix'=>'BAR'),
-            array('prefix'=>'CTY'),
-            array('prefix'=>'PER'),
-            array('prefix'=>'MOM')
+            array('prefix'=>'HC'),//healthcenter
+            array('prefix'=>'PUR'),//purok
+            array('prefix'=>'BAR'),//barangay
+            array('prefix'=>'CTY'),//city
+            array('prefix'=>'PER'),//personnel
+            array('prefix'=>'MOM'),//mother
+            array('prefix'=>'PRG'),//pregnancy
+            array('prefix'=>'PRE'),//prenatal
+            array('prefix'=>'POS'),//portnatal
+            array('prefix'=>'CHD'),//child
+            array('prefix'=>'DEL'),//delivery
+            array('prefix'=>'SVC'),//service
+            array('prefix'=>'ACQ'),//service acquired
+            array('prefix'=>'REF'),//referral
+            array('prefix'=>'CHV')//child visit
         ));
 
         DB::table('city')->insert(
