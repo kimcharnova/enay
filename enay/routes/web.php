@@ -15,3 +15,5 @@
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
+
+Route::get('/maternal-records', 'HomeController@search_mother')->name('maternal-records');
