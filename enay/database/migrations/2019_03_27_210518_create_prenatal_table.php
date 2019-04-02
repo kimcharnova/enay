@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePurokTable extends Migration
+class CreatePrenatalTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreatePurokTable extends Migration
      */
     public function up()
     {
-        Schema::create('purok', function (Blueprint $table) {
-            $table->string('purokid')->primary()->default('PUR');
-            $table->string('name');
-            $table->string('barangayid');
+        Schema::create('prenatal', function (Blueprint $table) {
+            $table->string('prenatalid')->primary()->default('PRE');//add more columns
             $table->timestamps();
         });
-
     }
 
     /**
@@ -29,7 +26,6 @@ class CreatePurokTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('purok');
-        
+        Schema::dropIfExists('prenatal');
     }
 }
