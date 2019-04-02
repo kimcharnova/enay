@@ -7,7 +7,7 @@
 		<img src="images/user.jpg" alt="User">
 	</div>
 			<div class="info-container"> 
-				<div class="name">{{ Auth::user()->fname }}</div>
+				<div class="name">{{ Auth::user()->fname}}</div>
 				<div class="email">{{ Auth::user()->email }}</div>
 		</div>
 	</div>
@@ -16,7 +16,7 @@
 			<div class="slimscrollDiv" style="position: relative; overflow: hidden; width: auto; height: 112px background-color= black ">
 				<ul class="list" style="overflow: hidden; width: auto; height: 112px">
 					<li> 
-						<a href="{{ route('maternal-records') }}" class="menu-toggle waves-effect waves-block">
+						<a href="/maternal" class="menu-toggle waves-effect waves-block">
                             <span>Maternal Care</span>
                         </a>
                     </li>

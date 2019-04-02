@@ -26,8 +26,8 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function search_mother()
+    public function maternal()
     {
-        return view('maternal-records');
+        return view('layouts.maternal');
     }
 }
