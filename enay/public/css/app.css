@@ -10806,6 +10806,11 @@ ul {
   margin-bottom: 10px;
 }
 
+li {
+  list-style: none;
+  padding: 15px 10px;
+}
+
 .menu.list a {
   color: #747474;
   position: relative;

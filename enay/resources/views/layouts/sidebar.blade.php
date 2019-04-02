@@ -16,7 +16,7 @@
 			<div class="slimscrollDiv" style="position: relative; overflow: hidden; width: auto; height: 112px background-color= black ">
 				<ul class="list" style="overflow: hidden; width: auto; height: 112px">
 					<li> 
-						<a href="javascript:void(0);" class="menu-toggle waves-effect waves-block">
+						<a href="/maternal" class="menu-toggle waves-effect waves-block">
                             <span>Maternal Care</span>
                         </a>
                     </li>
