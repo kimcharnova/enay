@@ -22,8 +22,16 @@ class CreatePostnatalTable extends Migration
             $table->string('remarks');
             $table->string('id');//fk
             $table->foreign('id')->references('id')->on('users');
+            $table->date('nextVisit');
             $table->timestamps();
         });
+
+        DB::unprepared('CREATE TRIGGER before_insert_postnatal BEFORE INSERT ON postnatal
+            FOR EACH ROW
+            BEGIN
+                UPDATE increment SET num=num+1 WHERE prefix=NEW.postnatalid;
+                SET NEW.postnatalid = concat(NEW.postnatalid, (SELECT num FROM increment WHERE prefix=NEW.postnatalid));
+            END');
 
     }
 

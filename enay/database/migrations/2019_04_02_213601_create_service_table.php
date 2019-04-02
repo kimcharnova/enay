@@ -20,6 +20,13 @@ class CreateServiceTable extends Migration
             $table->string('serviceFor');
             $table->timestamps();
         });
+
+        DB::unprepared('CREATE TRIGGER before_insert_service BEFORE INSERT ON service
+            FOR EACH ROW
+            BEGIN
+                UPDATE increment SET num=num+1 WHERE prefix=NEW.serviceid;
+                SET NEW.serviceid = concat(NEW.serviceid, (SELECT num FROM increment WHERE prefix=NEW.serviceid));
+            END');
     }
 
     /**

@@ -18,7 +18,7 @@ class CreateChildvisitTable extends Migration
             $table->date('dateOfVisit');
             $table->tinyinteger('currentAge');
             $table->string('diagnosis');
-            $table->string('nextVisit');
+            $table->date('nextVisit');
             $table->string('childid');//fk
             $table->foreign('childid')->references('childid')->on('child');
             $table->string('remarks');
@@ -26,6 +26,13 @@ class CreateChildvisitTable extends Migration
             $table->foreign('id')->references('id')->on('users');
             $table->timestamps();
         });
+
+        DB::unprepared('CREATE TRIGGER before_insert_childvisit BEFORE INSERT ON childvisit
+            FOR EACH ROW
+            BEGIN
+                UPDATE increment SET num=num+1 WHERE prefix=NEW.childvisitid;
+                SET NEW.childvisitid = concat(NEW.childvisitid, (SELECT num FROM increment WHERE prefix=NEW.childvisitid));
+            END');
     }
 
     /**

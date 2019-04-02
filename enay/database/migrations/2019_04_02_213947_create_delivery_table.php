@@ -23,6 +23,13 @@ class CreateDeliveryTable extends Migration
             $table->string('remarks');
             $table->timestamps();
         });
+
+        DB::unprepared('CREATE TRIGGER before_insert_delivery BEFORE INSERT ON delivery
+            FOR EACH ROW
+            BEGIN
+                UPDATE increment SET num=num+1 WHERE prefix=NEW.deliveryid;
+                SET NEW.deliveryid = concat(NEW.deliveryid, (SELECT num FROM increment WHERE prefix=NEW.deliveryid));
+            END');
     }
 
     /**

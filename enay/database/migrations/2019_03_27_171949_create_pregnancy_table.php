@@ -24,6 +24,13 @@ class CreatePregnancyTable extends Migration
             $table->timestamps();
         });
 
+        DB::unprepared('CREATE TRIGGER before_insert_pregnancy BEFORE INSERT ON pregnancy
+            FOR EACH ROW
+            BEGIN
+                UPDATE increment SET num=num+1 WHERE prefix=NEW.pregnancyid;
+                SET NEW.pregnancyid = concat(NEW.pregnancyid, (SELECT num FROM increment WHERE prefix=NEW.pregnancyid));
+            END');
+
     }
 
     /**

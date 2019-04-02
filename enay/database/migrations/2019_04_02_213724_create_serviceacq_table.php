@@ -20,6 +20,13 @@ class CreateServiceacqTable extends Migration
             $table->string('reference');
             $table->timestamps();
         });
+
+        DB::unprepared('CREATE TRIGGER before_insert_serviceacq BEFORE INSERT ON serviceacq
+            FOR EACH ROW
+            BEGIN
+                UPDATE increment SET num=num+1 WHERE prefix=NEW.serviceacquiredid;
+                SET NEW.serviceacquiredid = concat(NEW.serviceacquiredid, (SELECT num FROM increment WHERE prefix=NEW.serviceacquiredid));
+            END');
     }
 
     /**

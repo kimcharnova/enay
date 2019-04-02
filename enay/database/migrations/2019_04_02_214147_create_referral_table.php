@@ -27,6 +27,13 @@ class CreateReferralTable extends Migration
             $table->foreign('id')->references('id')->on('users');
             $table->timestamps();
         });
+
+        DB::unprepared('CREATE TRIGGER before_insert_referral BEFORE INSERT ON referral
+            FOR EACH ROW
+            BEGIN
+                UPDATE increment SET num=num+1 WHERE prefix=NEW.referralid;
+                SET NEW.referralid = concat(NEW.referralid, (SELECT num FROM increment WHERE prefix=NEW.referralid));
+            END');
     }
 
     /**
