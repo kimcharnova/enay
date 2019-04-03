@@ -20,6 +20,20 @@
                             <span>Maternal Care</span>
                         </a>
                     </li>
+                    <li> 
+						<a href="/child" class="menu-toggle waves-effect waves-block">
+                            <span>Child Care</span>
+                        </a>
+                    </li>
+                    <li> 
+						<a href="/analytics" class="menu-toggle waves-effect waves-block">
+                            <span>Analytics</span>
+                        </a>
+                        <ul class="analytics-list">
+                        	<li><a href="/graph" class="menu-toggle waves-effect waves-block"> <span>Graph</span></a></li>
+                        	<li><a href="/map" class="menu-toggle waves-effect waves-block"> <span>Mapping</span></a></li>
+                        </ul>
+                    </li>
 				</ul>
 			</div>
 		</div>
