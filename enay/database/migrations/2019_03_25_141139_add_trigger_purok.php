@@ -13,12 +13,19 @@ class AddTriggerPurok extends Migration
      */
     public function up()
     {
-        DB::unprepared('CREATE TRIGGER before_insert_purok BEFORE INSERT ON purok
+        DB::connection()->getPDO()->exec("CREATE TRIGGER before_insert_purok BEFORE INSERT ON purok
             FOR EACH ROW
             BEGIN
-                UPDATE increment SET num=num+1 where prefix=NEW.purokid;
-                SET new.purokid = concat(new.purokid, (SELECT num from increment where prefix=new.purokid));
-            END');
+                SET @bar := (SELECT barangayid FROM barangay where barangayid=new.barangayid);
+                IF(@bar IS NOT NULL) THEN
+                    UPDATE increment SET num=num+1 where prefix=NEW.purokid;
+                    SET new.purokid = concat(new.purokid, (SELECT num from increment where prefix=new.purokid));
+                ELSE
+                    SET new.purokid = NULL;
+                    SIGNAL SQLSTATE '45000' SET Message_Text = 'Purok and Barangay entered are incompatible.';
+                END IF;
+            END
+            ");
 
 
     }

@@ -19,6 +19,14 @@ class CreateCityTable extends Migration
             $table->timestamps();
         });
 
+        Schema::table('purok', function (Blueprint $table) {
+            $table->foreign('barangayid')->references('barangayid')->on('barangay');
+        });
+
+        Schema::table('barangay', function (Blueprint $table) {
+            $table->foreign('cityid')->references('cityid')->on('city');
+        });           
+
         
     }
 
