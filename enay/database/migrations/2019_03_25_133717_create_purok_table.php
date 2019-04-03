@@ -16,6 +16,7 @@ class CreatePurokTable extends Migration
         Schema::create('purok', function (Blueprint $table) {
             $table->string('purokid')->primary()->default('PUR');
             $table->string('name');
+            $table->string('barangayid');
             $table->timestamps();
         });
 
