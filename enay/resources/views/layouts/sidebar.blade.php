@@ -14,25 +14,27 @@
 	<!-- Menu -->
 		<div class="menu">
 			<div class="slimscrollDiv" style="position: relative; overflow: hidden; width: auto; height: 112px background-color= black ">
-				<ul class="list" style="overflow: hidden; width: auto; height: 112px">
+				<ul class="list" style="overflow: hidden; width: auto; height: 500px ; text-decoration: none; ">
 					<li> 
-						<a href="/maternal" class="menu-toggle waves-effect waves-block">
+						<a style="text-decoration:none" href="/maternal" class="menu-toggle waves-effect waves-block">
                             <span>Maternal Care</span>
                         </a>
                     </li>
                     <li> 
-						<a href="/child" class="menu-toggle waves-effect waves-block">
+						<a style="text-decoration:none" href="/child" class="menu-toggle waves-effect waves-block">
                             <span>Child Care</span>
                         </a>
                     </li>
                     <li> 
-						<a href="/analytics" class="menu-toggle waves-effect waves-block">
+						<a style="text-decoration:none" href="/analytics" class="menu-toggle waves-effect waves-block">
                             <span>Analytics</span>
                         </a>
-                        <ul class="analytics-list">
-                        	<li><a href="/graph" class="menu-toggle waves-effect waves-block"> <span>Graph</span></a></li>
-                        	<li><a href="/map" class="menu-toggle waves-effect waves-block"> <span>Mapping</span></a></li>
+                        <div class="analytics-list">
+                        <ul>
+                        	<li><a style="text-decoration:none" href="/graph" class="menu-toggle waves-effect waves-block"> <span>Graph</span></a></li>
+                        	<li><a style="text-decoration:none" href="/map" class="menu-toggle waves-effect waves-block"> <span>Mapping</span></a></li>
                         </ul>
+                    </div>
                     </li>
 				</ul>
 			</div>

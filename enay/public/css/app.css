@@ -10750,8 +10750,6 @@ img {
   font-style: italic;
 }
 
-<<<<<<< HEAD
-=======
 .sidebar-container {
   width: 500px;
   height: 450px;
@@ -10777,6 +10775,7 @@ img {
   position: relative;
   border-bottom: 1px solid #e9e9e9;
   height: 135px;
+  color: white;
   background-color: #004d28;
 }
 
@@ -10811,6 +10810,12 @@ ul {
 li {
   list-style: none;
   padding: 15px 10px;
+  margin-bottom: 0;
+}
+
+.analytics-list {
+  list-style: none;
+  padding-left: 0;
 }
 
 .menu.list a {
@@ -10837,7 +10842,6 @@ li {
   white-space: pre;
 }
 
->>>>>>> 4f12d47c0bdb35b84922e3283162539080f95a8c
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
