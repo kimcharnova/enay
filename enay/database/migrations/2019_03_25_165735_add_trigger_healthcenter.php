@@ -17,13 +17,13 @@ class AddTriggerHealthcenter extends Migration
             FOR EACH ROW
            BEGIN
 
-            SET @pur := (SELECT purokid FROM purok where purokid=NEW.purokid);
-            SET @bar := (SELECT barangayid FROM barangay where barangayid=NEW.barangayid);
-            SET @cty := (SELECT cityid FROM city where cityid=NEW.cityid);
-            IF((@pur IS NOT NULL) AND (@bar IS NOT NULL) AND (@cty IS NOT NULL)) THEN
-                UPDATE increment SET num=num+1 where prefix=NEW.healthcenterid;
-                SET new.healthcenterid = concat(new.healthcenterid, (SELECT num from increment where prefix=new.healthcenterid));
-            END IF;
+            SET @pur := (SELECT purokid FROM purok join barangay on purok.barangayid=barangay.barangayid where purokid=NEW.purokid AND purok.barangayid=new.barangayid AND cityid=new.cityid);
+                IF((@pur IS NOT NULL)) THEN
+                    UPDATE increment SET num=num+1 where prefix=NEW.healthcenterid;
+                    SET new.healthcenterid = concat(new.healthcenterid, (SELECT num from increment where prefix=new.healthcenterid));
+                ELSE
+                    SET new.healthcenterid = NULL;
+                END IF;
             END
             ');
 
