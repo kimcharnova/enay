@@ -23,8 +23,8 @@ class CreateReferralTable extends Migration
             $table->string('referralDiagnosis');
             $table->string('referralAction');
             $table->string('referralInstruction');
-            $table->string('id');//fk
-            $table->foreign('id')->references('id')->on('users');
+            $table->string('personnelid');//fk
+            $table->foreign('personnelid')->references('id')->on('users');
             $table->timestamps();
         });
 

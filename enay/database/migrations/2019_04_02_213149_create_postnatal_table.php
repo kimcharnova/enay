@@ -20,8 +20,8 @@ class CreatePostnatalTable extends Migration
             $table->string('pregnancyid');//fk
             $table->foreign('pregnancyid')->references('pregnancyid')->on('pregnancy');
             $table->string('remarks');
-            $table->string('id');//fk
-            $table->foreign('id')->references('id')->on('users');
+            $table->string('personnelid');//fk
+            $table->foreign('personnelid')->references('id')->on('users');
             $table->date('nextVisit');
             $table->timestamps();
         });
