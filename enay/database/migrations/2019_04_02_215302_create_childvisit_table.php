@@ -22,8 +22,8 @@ class CreateChildvisitTable extends Migration
             $table->string('childid');//fk
             $table->foreign('childid')->references('childid')->on('child');
             $table->string('remarks');
-            $table->string('id');//fk
-            $table->foreign('id')->references('id')->on('users');
+            $table->string('personnelid');//fk
+            $table->foreign('personnelid')->references('id')->on('users');
             $table->timestamps();
         });
 

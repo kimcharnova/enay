@@ -19,12 +19,14 @@ class CreatePrenatalTable extends Migration
             $table->foreign('pregnancyid')->references('pregnancyid')->on('pregnancy');
             $table->date('dateOfVisit');
             $table->tinyinteger('trimesterno');
-            $table->tinyinteger('geslationalage');
+            $table->tinyinteger('gestationalage');
             $table->float('weight');
             $table->string('bloopressure');
             $table->string('labresult')->nullable();
             $table->date('nextVisit');
             $table->string('remarks');
+            $table->string('personnelid');//fk
+            $table->foreign('personnelid')->references('id')->on('users');
             $table->timestamps();
         });
 

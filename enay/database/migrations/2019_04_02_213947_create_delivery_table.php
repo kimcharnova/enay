@@ -15,6 +15,8 @@ class CreateDeliveryTable extends Migration
     {
         Schema::create('delivery', function (Blueprint $table) {
             $table->string('deliveryid')->primary()->default('DEL');
+            $table->string('pregnancyid');//fk
+            $table->foreign('pregnancyid')->references('pregnancyid')->on('pregnancy');
             $table->string('attendantType');
             $table->string('birthplace');
             $table->float('birthweight');
