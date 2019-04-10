@@ -23,8 +23,18 @@ class CreateReferralTable extends Migration
             $table->string('referralDiagnosis');
             $table->string('referralAction');
             $table->string('referralInstruction');
+<<<<<<< Updated upstream
             $table->string('personnelid');//fk
             $table->foreign('personnelid')->references('id')->on('users');
+=======
+<<<<<<< HEAD
+            $table->string('id');//fk
+            $table->foreign('id')->references('id')->on('users');
+=======
+            $table->string('personnelid');//fk
+            $table->foreign('personnelid')->references('id')->on('users');
+>>>>>>> 3766d7c9554f0ef1845365011f8fe70a5f45d9a5
+>>>>>>> Stashed changes
             $table->timestamps();
         });
 

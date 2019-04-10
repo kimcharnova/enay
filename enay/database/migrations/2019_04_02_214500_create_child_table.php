@@ -19,6 +19,14 @@ class CreateChildTable extends Migration
             $table->string('mname')->nullable();
             $table->string('lname');
             $table->date('dob');
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+            $table->string('pregnancyid');//fk
+            $table->foreign('pregnancyid')->references('pregnancyid')->on('pregnancy');
+=======
+>>>>>>> 3766d7c9554f0ef1845365011f8fe70a5f45d9a5
+>>>>>>> Stashed changes
             $table->tinyinteger('childOrder');
             $table->date('dateRegistered');
             $table->string('gender');
