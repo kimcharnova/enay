@@ -1,21 +1,15 @@
 @extends('layouts.main')
 
 @section('content')
-<div class="container-maternal">
-    <div class="row justify-content-center">
-        <div class="col-md-8" >
-            <div class="card">
-                <div class="card-header">Maternal</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+	<form action="/search" method="POST" role="search">
+    	{{ csrf_field() }}
+    	<div class="input-group">
+        	<input type="text" class="form-control" name="q" placeholder="Search mother">
+        		<span class="input-group-btn">
+            		<button type="submit" class="btn btn-default">
+            			<span class="glyphicon glyphicon-search"></span>
+            		</button>
+        		</span>
+    	</div>
+	</form>
 @endsection
