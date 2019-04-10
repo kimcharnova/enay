@@ -19,8 +19,6 @@ class CreateChildTable extends Migration
             $table->string('mname')->nullable();
             $table->string('lname');
             $table->date('dob');
-            $table->string('pregnancyid');//fk
-            $table->foreign('pregnancyid')->references('pregnancyid')->on('pregnancy');
             $table->tinyinteger('childOrder');
             $table->date('dateRegistered');
             $table->string('gender');
