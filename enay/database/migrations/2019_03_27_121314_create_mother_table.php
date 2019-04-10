@@ -27,8 +27,8 @@ class CreateMotherTable extends Migration
             $table->foreign('barangayid')->references('barangayid')->on('barangay');
             $table->string('cityid');//fk
             $table->foreign('cityid')->references('cityid')->on('city');
-            $table->float('long');
-            $table->float('lat');
+            $table->float('longitude');
+            $table->float('latitude');
             $table->string('bloodtype');
             $table->tinyinteger('height');
             $table->string('edu');

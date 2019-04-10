@@ -25,9 +25,24 @@ class HomeController extends Controller
     {
         return view('home');
     }
-
-    public function maternal()
-    {
+public function maternal() {
         return view('layouts.maternal');
     }
+
+    public function child() {
+        return view('layouts.child');
+    }
+
+    public function analytics() {
+        return view('layouts.analytics');
+    }
+
+    public function graph() {
+        return view('layouts.graph');
+    }
+
+    public function map() {
+        return view('layouts.map');
+    }
+
 }

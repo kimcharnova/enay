@@ -11,6 +11,10 @@
 |
 */
 Route::get('/maternal', 'HomeController@maternal');
+Route::get('/child', 'HomeController@child');
+Route::get('/analytics', 'HomeController@analytics');
+Route::get('/graph', 'HomeController@graph');
+Route::get('/map', 'HomeController@map');
 
 Auth::routes();
 

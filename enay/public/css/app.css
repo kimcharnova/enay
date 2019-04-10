@@ -10775,6 +10775,7 @@ img {
   position: relative;
   border-bottom: 1px solid #e9e9e9;
   height: 135px;
+  color: white;
   background-color: #004d28;
 }
 
@@ -10833,6 +10834,12 @@ li {
 .copyright {
   color: black;
   white-space: pre;
+}
+
+.container-maternal {
+  margin-right: -150px;
+  margin-left: 10 0px;
+  height: 100%;
 }
 
 .navbar-laravel {
