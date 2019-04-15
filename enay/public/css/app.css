@@ -10810,6 +10810,12 @@ ul {
 li {
   list-style: none;
   padding: 15px 10px;
+  margin-bottom: 0;
+}
+
+.analytics-list {
+  list-style: none;
+  padding-left: 0;
 }
 
 .menu.list a {
@@ -10836,11 +10842,65 @@ li {
   white-space: pre;
 }
 
-.container-maternal {
+#container-maternal {
   margin-right: -150px;
-  margin-left: 10 0px;
-  height: 100%;
+  height: 500px;
+  max-height: 520px;
+  width: 75%;
+  margin-left: 25%;
+  background-color: black;
 }
+
+#search-form {
+  width: 100%;
+  text-align: center;
+}
+
+#search-form > .form-group > .input-group > .form-control {
+  height: 40px;
+}
+
+#search-form > .form-group > .input-group > .input-group-btn > .btn {
+  height: 40px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+#search-form > .form-group > .input-group > .input-group-btn > .btn .glyphicon {
+  margin-right: 12px;
+}
+
+#search-form > .form-group > .input-group > .form-control {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+#search-form > .form-group > .input-group > .form-control:focus {
+  border-color: #33A444;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 1px rgba(0, 109, 0, 0.8);
+}
+
+/*.container-maternal {
+	margin-right: -150px;
+	height: 500px;
+	max-height: 520px;
+	max-width: 300px;
+	margin-left:25%;
+}
+
+.card-header {
+	width: 100%;
+}
+
+.card-container {
+	height: 800px;
+	width: 100%;
+}
+
+.searchcon {
+	width: 100%;
+}*/
 
 .navbar-laravel {
   background-color: #fff;
