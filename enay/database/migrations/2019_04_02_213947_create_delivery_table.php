@@ -15,22 +15,14 @@ class CreateDeliveryTable extends Migration
     {
         Schema::create('delivery', function (Blueprint $table) {
             $table->string('deliveryid')->primary()->default('DEL');
-<<<<<<< Updated upstream
             $table->string('pregnancyid');//fk
             $table->foreign('pregnancyid')->references('pregnancyid')->on('pregnancy');
-=======
-<<<<<<< HEAD
-=======
-            $table->string('pregnancyid');//fk
-            $table->foreign('pregnancyid')->references('pregnancyid')->on('pregnancy');
->>>>>>> 3766d7c9554f0ef1845365011f8fe70a5f45d9a5
->>>>>>> Stashed changes
             $table->string('attendantType');
             $table->string('birthplace');
             $table->float('birthweight');
             $table->tinyinteger('birthlength');
             $table->string('birthtype');
-            $table->string('remarks');
+            $table->string('remarks')->nullable();
             $table->timestamps();
         });
 
