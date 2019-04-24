@@ -19,3 +19,5 @@ Route::get('/map', 'HomeController@map');
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
+
+Route::resource('mother', 'MotherController');
