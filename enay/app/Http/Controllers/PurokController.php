@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Delivery;
+use App\Purok;
 use Illuminate\Http\Request;
 
-class DeliveryController extends Controller
+class PurokController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class DeliveryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Delivery  $delivery
+     * @param  \App\Purok  $purok
      * @return \Illuminate\Http\Response
      */
-    public function show(Delivery $delivery)
+    public function show(Purok $purok)
     {
         //
     }
@@ -52,10 +52,10 @@ class DeliveryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Delivery  $delivery
+     * @param  \App\Purok  $purok
      * @return \Illuminate\Http\Response
      */
-    public function edit(Delivery $delivery)
+    public function edit(Purok $purok)
     {
         //
     }
@@ -64,10 +64,10 @@ class DeliveryController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Delivery  $delivery
+     * @param  \App\Purok  $purok
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Delivery $delivery)
+    public function update(Request $request, Purok $purok)
     {
         //
     }
@@ -75,10 +75,10 @@ class DeliveryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Delivery  $delivery
+     * @param  \App\Purok  $purok
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Delivery $delivery)
+    public function destroy(Purok $purok)
     {
         //
     }

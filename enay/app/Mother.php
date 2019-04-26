@@ -7,8 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 class Mother extends Model
 {
     protected $fillable = [
-    	'fname', 'mname', 'lname', 'email', 'phone', 'houseno', 'purokid', 'barangayid', 'cityid',
+    	'fname',
+    	'mname',
+    	'lname',
+    	'phone',
+    	'houseno',
+    	'purokid',
+    	'barangayid',
+    	'cityid',
+    	'longitude',
+    	'latitude',
+    	'bloodtype',
+    	'height',
+    	'edu',
     ];
-
-
 }
