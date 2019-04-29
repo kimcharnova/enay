@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mother;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 
 class MotherController extends Controller
 {
@@ -14,7 +15,7 @@ class MotherController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
@@ -81,5 +82,20 @@ class MotherController extends Controller
     public function destroy(Mother $mother)
     {
         //
+    }
+
+    public function searchMother()
+    {
+        $mom = Input::get('mom');
+        $mother = Mother::where('fname', 'LIKE', '%'.$mom.'%')->orWhere
+        ('email', 'LIKE', '%'.$mom.'%')->orWhere('lname','LIKE','%'.$mom.'%')->get();
+        if(count($mother) > 0)
+            return view('layouts.mother')->withDetails($mother)->withQuery($mom);
+        else
+            return view('layouts.mother')->withMessage('No details found.');
+    }
+
+    public function showMaternalCard(){
+        return view('layouts.mother');
     }
 }

@@ -48,6 +48,16 @@ class AddInsertions extends Migration
         DB::table('healthcenter')->insert(
             array('purokid' => 'PUR1', 'barangayid' => 'BAR1', 'cityid' => 'CTY1')
         );
+
+        DB::table('mother')->insert(
+            array('fname' => 'Peepa', 'mname' => 'Cam', 'lname' => 'Doza',
+                'dob' => '1994-04-16', 'email' => 'peepadoza@gmail.com', 'phone' => '09178949189', 
+                'houseno' => '16', 'purokid' => 'PUR1', 'barangayid' => 'BAR1', 'cityid' => 'CTY1',
+                'longitude' => 8.25, 'latitude' => 124.25, 'bloodtype' => 'A+', 'height' => '157',
+                'edu' => 'College Graduate', 'healthproblems' => NULL)
+        );
+
+
     }
 
     /**

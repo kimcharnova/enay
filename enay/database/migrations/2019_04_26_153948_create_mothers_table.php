@@ -18,6 +18,7 @@ class CreateMothersTable extends Migration
             $table->string('fname');
             $table->string('mname');
             $table->string('lname');
+            $table->date('dob');
             $table->string('email')->nullable();
             $table->string('phone');
             $table->string('houseno');
@@ -30,8 +31,9 @@ class CreateMothersTable extends Migration
             $table->float('longitude');
             $table->float('latitude');
             $table->string('bloodtype');
-            $table->tinyinteger('height');
+            $table->integer('height');
             $table->string('edu');
+            $table->string('healthproblems')->nullable();
             $table->timestamps();
         });
     }
