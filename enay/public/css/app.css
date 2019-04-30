@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css);@charset "UTF-8";
 
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
@@ -10658,6 +10658,7 @@ a.text-dark:focus {
 html,
 body {
   height: 100%;
+  font-size: 16px;
 }
 
 .login-container {
@@ -10751,6 +10752,7 @@ img {
 }
 
 .sidebar-container {
+  /*WALA MAN DIAY NI PULOS*/
   width: 500px;
   height: 450px;
   color: #002a16;
@@ -10760,12 +10762,12 @@ img {
   font-family: "Roboto", sans-serif;
   font-family: "Roboto", sans-serif;
   background: #fdfdfd;
-  width: 300px;
+  width: 22%;
   overflow: hidden;
   display: inline-block;
-  height: calc(100vh - 70px);
+  height: 87.8%;
   position: fixed;
-  top: 70px;
+  top: 12.2%;
   left: 0;
 }
 
@@ -10780,13 +10782,13 @@ img {
 }
 
 .imagedp {
-  margin-right: 12px;
+  margin-right: 10px;
   display: inline-block;
 }
 
 .imagedp img {
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   vertical-align: bottom !important;
 }
@@ -10834,6 +10836,55 @@ li {
 .copyright {
   color: black;
   white-space: pre;
+  font-size: 14px;
+}
+
+.container-card {
+  margin-left: 23.5%;
+  position: fixed;
+  top: 13%;
+  width: 75%;
+  height: 86%;
+}
+
+.card {
+  top: 13%;
+  width: 100%;
+  height: 100%;
+}
+
+.card-body {
+  width: 100%;
+  height: 100%;
+}
+
+#search-bar {
+  width: 75%;
+  font-size: 16px;
+  background-color: #004d28;
+  padding: 0;
+  margin: 0;
+  border-radius: 7px;
+  float: left;
+}
+
+.glyphicon-search {
+  color: white;
+  font-size: 14px;
+}
+
+#addNewMaternal {
+  position: relative;
+  float: right;
+  right: 0.5%;
+  background-color: #004d28;
+  text-align: center;
+  border-radius: 10px;
+}
+
+#search-results {
+  position: block;
+  margin-top: 40px;
 }
 
 .container-maternal {
@@ -10845,5 +10896,8 @@ li {
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  position: fixed;
+  height: 12%;
+  width: 100%;
 }
 

@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\City;
+use App\Mother;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 
-class CityController extends Controller
+class MotherController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,7 @@ class CityController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
@@ -41,10 +42,10 @@ class CityController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\City  $city
+     * @param  \App\Mother  $mother
      * @return \Illuminate\Http\Response
      */
-    public function show(City $city)
+    public function show(Mother $mother)
     {
         //
     }
@@ -52,10 +53,10 @@ class CityController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\City  $city
+     * @param  \App\Mother  $mother
      * @return \Illuminate\Http\Response
      */
-    public function edit(City $city)
+    public function edit(Mother $mother)
     {
         //
     }
@@ -64,10 +65,10 @@ class CityController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\City  $city
+     * @param  \App\Mother  $mother
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, City $city)
+    public function update(Request $request, Mother $mother)
     {
         //
     }
@@ -75,11 +76,26 @@ class CityController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\City  $city
+     * @param  \App\Mother  $mother
      * @return \Illuminate\Http\Response
      */
-    public function destroy(City $city)
+    public function destroy(Mother $mother)
     {
         //
+    }
+
+    public function searchMother()
+    {
+        $mom = Input::get('mom');
+        $mother = Mother::where('fname', 'LIKE', '%'.$mom.'%')->orWhere
+        ('email', 'LIKE', '%'.$mom.'%')->orWhere('lname','LIKE','%'.$mom.'%')->get();
+        if(count($mother) > 0)
+            return view('layouts.mother')->withDetails($mother)->withQuery($mom);
+        else
+            return view('layouts.mother')->withMessage('No details found.');
+    }
+
+    public function showMaternalCard(){
+        return view('layouts.mother');
     }
 }

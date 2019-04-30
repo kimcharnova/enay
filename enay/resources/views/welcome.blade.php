@@ -9,7 +9,7 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
-        <!-- Styles -->
+        <!-- Styles
         <style>
             html, body {
                 background-color: #fff;
@@ -61,7 +61,7 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
-        </style>
+        </style> -->
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -79,9 +79,9 @@
                 </div>
             @endif
 
-            <div class="content">
+        <!--<div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    eNay
                 </div>
 
                 <div class="links">
@@ -93,7 +93,7 @@
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
-            </div>
+            </div> -->
         </div>
     </body>
 </html>

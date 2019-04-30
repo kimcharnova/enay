@@ -26,7 +26,7 @@ class HomeController extends Controller
         return view('home');
     }
 public function maternal() {
-        return view('layouts.maternal');
+        return view('layouts.mother');
     }
 
     public function child() {

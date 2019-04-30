@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\City;
+use App\Delivery;
 use Illuminate\Http\Request;
 
-class CityController extends Controller
+class DeliveryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class CityController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\City  $city
+     * @param  \App\Delivery  $delivery
      * @return \Illuminate\Http\Response
      */
-    public function show(City $city)
+    public function show(Delivery $delivery)
     {
         //
     }
@@ -52,10 +52,10 @@ class CityController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\City  $city
+     * @param  \App\Delivery  $delivery
      * @return \Illuminate\Http\Response
      */
-    public function edit(City $city)
+    public function edit(Delivery $delivery)
     {
         //
     }
@@ -64,10 +64,10 @@ class CityController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\City  $city
+     * @param  \App\Delivery  $delivery
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, City $city)
+    public function update(Request $request, Delivery $delivery)
     {
         //
     }
@@ -75,10 +75,10 @@ class CityController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\City  $city
+     * @param  \App\Delivery  $delivery
      * @return \Illuminate\Http\Response
      */
-    public function destroy(City $city)
+    public function destroy(Delivery $delivery)
     {
         //
     }
