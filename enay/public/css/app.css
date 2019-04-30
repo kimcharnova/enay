@@ -10812,12 +10812,6 @@ ul {
 li {
   list-style: none;
   padding: 15px 10px;
-  margin-bottom: 0;
-}
-
-.analytics-list {
-  list-style: none;
-  padding-left: 0;
 }
 
 .menu.list a {
@@ -10891,6 +10885,12 @@ li {
 #search-results {
   position: block;
   margin-top: 40px;
+}
+
+.container-maternal {
+  margin-right: -150px;
+  margin-left: 10 0px;
+  height: 100%;
 }
 
 .navbar-laravel {

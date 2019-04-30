@@ -7,7 +7,7 @@
 		<img src="images/user.jpg" alt="User">
 	</div>
 			<div class="info-container"> 
-				<div class="name">{{ Auth::user()->fname }}</div>
+				<div class="name">{{ Auth::user()->fname}}</div>
 				<div class="email">{{ Auth::user()->email }}</div>
 		</div>
 	</div>
