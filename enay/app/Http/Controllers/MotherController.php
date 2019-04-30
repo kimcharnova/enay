@@ -86,16 +86,19 @@ class MotherController extends Controller
 
     public function searchMother()
     {
-        $mom = Input::get('mom');
+        /*$mom = Input::get('mom');
         $mother = Mother::where('fname', 'LIKE', '%'.$mom.'%')->orWhere
         ('email', 'LIKE', '%'.$mom.'%')->orWhere('lname','LIKE','%'.$mom.'%')->get();
         if(count($mother) > 0)
             return view('layouts.mother')->withDetails($mother)->withQuery($mom);
         else
-            return view('layouts.mother')->withMessage('No details found.');
+            return view('layouts.mother')->withMessage('No details found.');*/
+        $mother = Mother::all();
+        return view('layouts.mother')->withDetails($mother);
     }
 
     public function showMaternalCard(){
+
         return view('layouts.mother');
     }
 }
